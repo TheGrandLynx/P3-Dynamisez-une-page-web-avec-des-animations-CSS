@@ -1,0 +1,12 @@
+.header{
+    background-color: $bgColor;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    &__logo{
+        margin: auto;
+        height: 30px;
+    }
+}

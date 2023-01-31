@@ -1,0 +1,19 @@
+{
+  "name": "p3-dynamisez-une-page-web-avec-des-animations-css",
+  "version": "1.0.0",
+  "description": "Réalisation du projet 3 de la formation",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/styles.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheGrandLynx/P3-Dynamisez-une-page-web-avec-des-animations-CSS.git"
+  },
+  "author": "Terence Ngama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheGrandLynx/P3-Dynamisez-une-page-web-avec-des-animations-CSS/issues"
+  },
+  "homepage": "https://github.com/TheGrandLynx/P3-Dynamisez-une-page-web-avec-des-animations-CSS#readme"
+}

@@ -1,0 +1,14 @@
+.header {
+  background-color: white;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  margin: auto;
+  height: 30px;
+}
+
+/*# sourceMappingURL=styles.css.map */
