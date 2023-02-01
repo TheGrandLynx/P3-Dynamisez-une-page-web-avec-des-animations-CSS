@@ -1,0 +1,52 @@
+.sectionTrouverSonRestau{
+    display: flex;
+    flex-direction: column;
+}
+
+.localisation{
+    display: flex;
+    height: 40px;
+    background-color: #eaeaea;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: inset 0px 2px 2px #d3d3d3;
+    &__icon{
+        color: grey;
+    }
+    &__pVille{
+        color: grey;
+    }
+}
+
+.exploration{
+    display: flex;
+    background-color: #f7f7f7;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    gap: 15px;
+    &__h1{
+        margin: 0;
+        font-weight: 700;
+    }
+    &__pSousTitre{
+        margin: 0px;
+        color: #6a6a6a;
+    }
+    &__btnAction{
+        background: rgb(255,121,218);
+        background: linear-gradient(131deg, rgba(255,121,218,1) 5%, rgba(147,86,220,1) 61%);
+        border: none;
+        height: 50px;
+        padding: 0px 20px 0px 20px;
+        color: white;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        line-height: 21.13px;
+        border-radius: 25px 25px 25px 25px;
+    }
+}
