@@ -64,6 +64,46 @@
   border-radius: 25px 25px 25px 25px;
 }
 
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.etapes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.etape {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  height: 60px;
+  border-radius: 20px;
+  gap: 20px;
+  width: 90%;
+  box-shadow: 0px 3px 6px 2px #d3d3d3;
+}
+.etape__numEtape {
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  position: relative;
+  left: -10px;
+}
+.etape__iconeEtape--couleurGris {
+  color: #7e7e7e;
+}
+.etape__iconeEtape--couleurPrimaire {
+  color: #9356DC;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }
