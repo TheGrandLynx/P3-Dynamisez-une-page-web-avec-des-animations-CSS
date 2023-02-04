@@ -11,6 +11,31 @@
   height: 30px;
 }
 
+.footer {
+  background-color: #353535;
+  padding: 15px 0px 25px 20px;
+}
+.footer__h4 {
+  margin: 0;
+  font-weight: 400;
+  font-family: "Shrikhand", cursive;
+  color: white;
+}
+.footer__ul {
+  list-style-type: none;
+  color: white;
+  padding: 0;
+}
+.footer__ul__li__icon {
+  color: white;
+  font-size: 10px;
+}
+.footer__ul__li__a {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+
 .sectionTrouverSonRestau {
   display: flex;
   flex-direction: column;
