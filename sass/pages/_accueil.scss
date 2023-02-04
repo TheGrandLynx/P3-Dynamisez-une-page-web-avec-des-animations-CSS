@@ -91,3 +91,76 @@
         }
     }
 }
+
+.sectionRestaurants{
+    background-color: $couleurFond;
+    padding: 40px 15px 40px 15px;
+}
+
+.ctnRestaurants{
+    display: flex;
+    flex-direction: column;
+    &__h2{
+        font-weight: 900;
+    }
+}
+
+.ctnCardRestaurants{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cardRestaurants{
+    width: 100%;
+    &__aCard{
+        position: relative;
+        width: 100%;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        box-shadow: 5px 5px 5px #d9d9d9;
+    }
+    &__encartNouveau{
+        background-color: #99e2d0;
+        color: #139273;
+        font-weight: 900;
+        position: absolute;
+        left: 70%;
+        top: 5%;
+        padding: 10px;
+        width: auto;
+    }
+    &__imgCard{        
+        border-radius: 20px 20px 0px 0px;
+        height: 150px;
+        object-fit: cover;    
+    }
+    &__description{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__detail{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 10px;
+            &__h3{
+                font-weight: 900;
+                margin-bottom: 0px;
+            }
+            &__pDetail{
+                margin-top: 0px;
+                font-weight: 100;
+            }
+        }
+        
+        &__icon{
+            font-size: 25px;
+            margin-right: 30px;
+            
+        }
+    }
+}
