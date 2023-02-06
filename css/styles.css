@@ -14,6 +14,13 @@
 .footer {
   background-color: #353535;
   padding: 15px 0px 25px 20px;
+  display: flex;
+  flex-direction: column;
+}
+@media all and (min-width: 992px) {
+  .footer {
+    align-items: center;
+  }
 }
 .footer__h4 {
   margin: 0;
@@ -89,10 +96,18 @@
   border-radius: 25px 25px 25px 25px;
 }
 
+.sectionFonctionnement {
+  padding-bottom: 50px;
+}
+
 .fonctionnement {
   display: flex;
   flex-direction: column;
-  padding-bottom: 50px;
+}
+@media all and (min-width: 992px) {
+  .fonctionnement__h2 {
+    text-align: center;
+  }
 }
 
 .etapes {
@@ -100,6 +115,18 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+@media all and (min-width: 599px) and (max-width: 992px) {
+  .etapes {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media all and (min-width: 992px) {
+  .etapes {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .etape {
@@ -111,6 +138,17 @@
   gap: 20px;
   width: 90%;
   box-shadow: 0px 3px 6px 2px #d3d3d3;
+}
+@media all and (min-width: 599px) and (max-width: 992px) {
+  .etape {
+    width: auto;
+    padding-right: 15px;
+  }
+}
+@media all and (min-width: 992px) {
+  .etape {
+    width: 20%;
+  }
 }
 .etape__numEtape {
   color: white;
@@ -141,15 +179,43 @@
 .ctnRestaurants__h2 {
   font-weight: 900;
 }
+@media all and (min-width: 992px) {
+  .ctnRestaurants__h2 {
+    text-align: center;
+  }
+}
 
 .ctnCardRestaurants {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
+@media all and (min-width: 599px) and (max-width: 992px) {
+  .ctnCardRestaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+@media all and (min-width: 992px) {
+  .ctnCardRestaurants {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 
 .cardRestaurants {
   width: 100%;
+}
+@media all and (min-width: 599px) and (max-width: 992px) {
+  .cardRestaurants {
+    width: 40%;
+  }
+}
+@media all and (min-width: 992px) {
+  .cardRestaurants {
+    width: 20%;
+  }
 }
 .cardRestaurants__aCard {
   position: relative;
