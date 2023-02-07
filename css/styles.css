@@ -83,7 +83,7 @@
   color: #6a6a6a;
 }
 .exploration__btnAction {
-  background: rgb(255, 121, 218);
+  background-color: rgb(255, 121, 218);
   background: linear-gradient(131deg, rgb(255, 121, 218) 5%, rgb(147, 86, 220) 61%);
   border: none;
   height: 50px;
@@ -94,6 +94,26 @@
   text-align: center;
   line-height: 21.13px;
   border-radius: 25px 25px 25px 25px;
+  box-shadow: 0px 3px 6px 2px #d3d3d3;
+  position: relative;
+  z-index: 1;
+}
+.exploration__btnAction:hover::after {
+  opacity: 1;
+}
+.exploration__btnAction::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 0px 3px 6px 2px #bababa;
+  background: linear-gradient(131deg, #fface8 5%, #ae80e5 61%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 .sectionFonctionnement {
@@ -265,7 +285,28 @@
   font-size: 25px;
   margin-right: 30px;
 }
+.cardRestaurants__description__icon:hover .fa-heart {
+  animation: apparition 400ms forwards;
+}
+.cardRestaurants__description__icon:hover .fa-heart:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f004";
+  font-weight: 900;
+  background: linear-gradient(180deg, rgb(147, 86, 220) 51%, rgb(255, 121, 218) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0);
+}
 
+@keyframes apparition {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   color: black;
