@@ -5,6 +5,18 @@
     text-align: center;
     display: flex;
     align-items: center;
+    &__btnRetour{
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border: none;
+        text-decoration: none;
+        background-color: white;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     &__logo{
         margin: auto;
         height: 30px;
