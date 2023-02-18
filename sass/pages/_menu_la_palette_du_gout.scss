@@ -1,7 +1,7 @@
 .sectionMenu{
     width: 100%;
     position: relative;
-    
+    height: 100%;
 }
 .ctnImage{
     &__img{
@@ -12,10 +12,160 @@
 }
 
 .menu{
-    background-color:$couleurFond;
-    
+    background-color:$couleurFond;    
     border-radius: 25px 25px 0% 0%;
-    position: absolute;
-    top: 175px;
+    position: relative;
+    top: -25px;
     width: 100%;
+    display: flex;
+    flex-direction: column;    
+    padding-bottom: 20px;
+    .titreMenu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &__h1{
+            font-family:  'Shrikhand', cursive;
+        }
+    }
+    .plats{
+        display: flex;
+        flex-direction: column;
+        &__ctnTitre{
+            &--decalage{
+                margin-left: 30px;
+            }
+            &__h2{
+                color: #6a6a6a;
+                font-size: 18px;
+                margin-bottom: 0px;
+            }
+        }        
+        &__ctnDescriptionPlats{
+            display: flex;
+            flex-direction: column;
+            &__ctnDescription{
+                display: flex;
+                background-color: white;
+                border-radius: 15px;                
+                height: 50px;
+                margin: 10px 10px 0px 10px;
+                box-shadow: 5px 5px 5px #d9d9d9;
+                height: 60px;
+                &:nth-child(1){
+                    animation: fadeIn 1500ms, slideIn 1500ms ease;
+                }
+                &:nth-child(2){
+                    animation: fadeIn 1500ms 200ms backwards, slideIn 1500ms 200ms ease backwards;
+                }
+                &:nth-child(3){
+                    animation: fadeIn 1500ms 300ms backwards, slideIn 1500ms 300ms ease backwards;
+                }
+                &:nth-child(4){
+                    animation: fadeIn 1500ms 400ms backwards, slideIn 1500ms 400ms ease backwards;
+                }
+                &__description{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    padding: 0px 20px 10px 0px;
+                    width: 100%;
+                    
+                    &__ctnTexte{
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 10px;
+                        gap: 5px;
+                        flex-grow: 1;
+                        width: 200px;
+                        &__h3{
+                            font-size: 16px;
+                            margin-bottom: 0px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                        &__p{
+                            
+                            font-size: 13px;
+                            color: #6a6a6a;
+                            margin: 0px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    &__prix{
+                        font-size: 16px;
+                        font-weight: bold;
+                        white-space: nowrap;
+                    }
+                }                
+                &__validation{
+                    width:200px;
+                    height: 60px;
+                    position:relative;
+                    top:0;
+                    border-radius: 0px 15px 15px 0px;
+                    //right:-200px;
+                    background-color: $couleurTertiaire;
+                    color:#fff;
+                    width: 0px;
+                    transition:0.4s ease;
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                    &__icon{
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: white;
+                    }
+                }
+                position: relative;
+                overflow: hidden;
+                &:hover{
+                    .plats__ctnDescriptionPlats__ctnDescription__validation{
+                        width: 80px;
+                        
+                    }
+                }
+                &:hover{
+                    .plats__ctnDescriptionPlats__ctnDescription__validation__icon{
+                        animation: rotation 400ms forwards ;
+                        
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(360deg);
+    } 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(0px);
+    }
 }

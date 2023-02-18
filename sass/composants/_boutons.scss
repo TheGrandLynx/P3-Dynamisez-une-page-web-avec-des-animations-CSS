@@ -1,0 +1,21 @@
+.ctnHeart{
+    font-size: 25px;
+    margin-right: 30px;
+    &:hover {
+        .fa-heart{
+            animation: apparition 400ms forwards;    
+            &:before{
+                font-family: "Font Awesome 5 Free";
+                content:"\f004";
+                font-weight: 900;
+                background: linear-gradient(180deg, rgba(147,86,220,1) 51%, rgba(255,121,218,1) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transform: scale(0);
+            }
+            
+        }
+        
+    }
+}
