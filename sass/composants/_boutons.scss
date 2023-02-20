@@ -19,3 +19,40 @@
         
     }
 }
+
+.btnAction{
+    background-color: rgb(255,121,218);
+    background: linear-gradient(131deg, rgba(255,121,218,1) 5%, rgba(147,86,220,1) 61%);
+    border: none;
+    height: 50px;
+    padding: 0px 20px 0px 20px;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    line-height: 21.13px;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 0px 3px 6px 2px #d3d3d3;
+    position: relative;
+    z-index: 1;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;                
+            border-radius: 25px 25px 25px 25px;                
+            box-shadow: 0px 3px 6px 2px darken(#d3d3d3, 10%);
+            background: linear-gradient(131deg, lighten(rgba(255,121,218,1), 10%) 5%, lighten(rgba(147,86,220,1), 10%) 61%);;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+        }
+    
+}

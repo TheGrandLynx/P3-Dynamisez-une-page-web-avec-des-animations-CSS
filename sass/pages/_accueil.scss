@@ -75,6 +75,7 @@
 }
 .sectionFonctionnement{    
     padding-bottom: 50px;
+    margin: 0px 20px 0px 20px;
 }
 .fonctionnement{
     display: flex;
@@ -109,7 +110,7 @@
     height: 60px;
     border-radius: 20px;
     gap: 20px;
-    width: 90%;
+    width: 100%;
     box-shadow: 0px 3px 6px 2px #d3d3d3;
     @media all and (min-width: $breakPointTablette) and (max-width:$breakPointDesktop){
         width: auto;
