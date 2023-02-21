@@ -564,6 +564,11 @@ hr.solid {
   padding-bottom: 30px;
   background-color: #f7f7f7;
 }
+@media all and (min-width: 599px) {
+  .sectionMenu {
+    background-color: white;
+  }
+}
 
 .ctnImage {
   width: 100%;
@@ -584,10 +589,31 @@ hr.solid {
   flex-direction: column;
   padding-bottom: 20px;
 }
+@media all and (min-width: 599px) and (max-width: 992px) {
+  .menu {
+    width: 60%;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 5px 5px 5px #d9d9d9;
+  }
+}
+@media all and (min-width: 992px) {
+  .menu {
+    width: 80%;
+    gap: 50px;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 5px 5px 5px #d9d9d9;
+  }
+}
 .menu .titreMenu {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+@media all and (min-width: 992px) {
+  .menu .titreMenu {
+    justify-content: center;
+    gap: 20px;
+  }
 }
 .menu .titreMenu__h1 {
   font-family: "Shrikhand", cursive;
@@ -596,6 +622,13 @@ hr.solid {
   display: flex;
   flex-direction: column;
   margin: 0px 10px 0px 10px;
+}
+@media all and (min-width: 992px) {
+  .menu .plats__ctnTitre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .menu .plats__ctnTitre--decalage {
   margin-left: 30px;
@@ -608,6 +641,12 @@ hr.solid {
 .menu .plats__ctnDescriptionPlats {
   display: flex;
   flex-direction: column;
+}
+@media all and (min-width: 992px) {
+  .menu .plats__ctnDescriptionPlats {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .menu .plats__ctnDescriptionPlats__ctnDescription {
   display: flex;
@@ -631,6 +670,11 @@ hr.solid {
 }
 .menu .plats__ctnDescriptionPlats__ctnDescription:nth-child(4) {
   animation: fadeIn 1500ms 400ms backwards, slideIn 1500ms 400ms ease backwards;
+}
+@media all and (min-width: 992px) {
+  .menu .plats__ctnDescriptionPlats__ctnDescription {
+    width: 30%;
+  }
 }
 .menu .plats__ctnDescriptionPlats__ctnDescription__description {
   display: flex;
