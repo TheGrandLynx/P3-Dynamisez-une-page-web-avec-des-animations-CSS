@@ -31,13 +31,13 @@
     @media all and (min-width: $breakPointTablette) and (max-width:$breakPointDesktop){
         width: 60%;
         border-radius: 25px 25px 25px 25px;
-        box-shadow: 5px 5px 5px #d9d9d9;
+        box-shadow: 5px 5px 5px $couleurOmbre;
     }
     @media all and (min-width: $breakPointDesktop){
         width: 80%;
         gap: 50px;
         border-radius: 25px 25px 25px 25px;
-        box-shadow: 5px 5px 5px #d9d9d9;
+        box-shadow: 5px 5px 5px $couleurOmbre;
     }
     .titreMenu{
         display: flex;
@@ -48,7 +48,7 @@
             gap: 20px;
         }
         &__h1{
-            font-family:  'Shrikhand', cursive;
+            font-family:  $fontTitre;
         }
     }
     .plats{
@@ -66,7 +66,7 @@
                 margin-left: 30px;
             }
             &__h2{
-                color: #6a6a6a;
+                color: $couleurTexteSecondaire;
                 font-size: 18px;
                 margin-bottom: 0px;
             }
@@ -76,7 +76,8 @@
             flex-direction: column;
             @media all and (min-width: $breakPointDesktop){
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
             }
             &__ctnDescription{
                 display: flex;
@@ -84,22 +85,18 @@
                 border-radius: 15px;                
                 height: 50px;
                 margin-top: 10px;
-                box-shadow: 5px 5px 5px #d9d9d9;
+                box-shadow: 5px 5px 5px $couleurOmbre;
                 height: 60px;
-                &:nth-child(1){
-                    animation: fadeIn 1500ms, slideIn 1500ms ease;
-                }
-                &:nth-child(2){
-                    animation: fadeIn 1500ms 200ms backwards, slideIn 1500ms 200ms ease backwards;
-                }
-                &:nth-child(3){
-                    animation: fadeIn 1500ms 300ms backwards, slideIn 1500ms 300ms ease backwards;
-                }
-                &:nth-child(4){
-                    animation: fadeIn 1500ms 400ms backwards, slideIn 1500ms 400ms ease backwards;
-                }
-                @media all and (min-width: $breakPointDesktop){
+                @include animationsAvecDelai;
+                @media all and (min-width: $breakPointDesktop){                    
+                    &:first-child:nth-last-child(3),
+                    &:first-child:nth-last-child(3) ~ .plats__ctnDescriptionPlats__ctnDescription {
                     width: 30%;
+                    }
+                    &:first-child:nth-last-child(4),
+                    &:first-child:nth-last-child(4) ~ .plats__ctnDescriptionPlats__ctnDescription {
+                    width: 40%;                    
+                    }
                 }
                 &__description{
                     display: flex;
@@ -125,7 +122,7 @@
                         &__p{
                             
                             font-size: 13px;
-                            color: #6a6a6a;
+                            color: $couleurTexteSecondaire;
                             margin: 0px;
                             overflow: hidden;
                             white-space: nowrap;

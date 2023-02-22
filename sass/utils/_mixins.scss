@@ -1,0 +1,8 @@
+@mixin animationsAvecDelai {
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation: fadeIn 1500ms #{$i * 100}ms ease backwards, slideIn 1500ms #{$i * 100}ms ease backwards;
+      }
+    }
+}
+

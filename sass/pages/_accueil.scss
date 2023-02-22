@@ -10,12 +10,12 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    box-shadow: inset 0px 2px 2px #d3d3d3;
+    box-shadow: inset 0px 2px 2px $couleurOmbre;
     &__icon{
-        color: grey;
+        color: $couleurTexteSecondaire;
     }
     &__pVille{
-        color: grey;
+        color: $couleurTexteSecondaire;
     }
 }
 
@@ -34,44 +34,8 @@
     }
     &__pSousTitre{
         margin: 0px;
-        color: #6a6a6a;
-    }
-    &__btnAction{
-        background-color: rgb(255,121,218);
-        background: linear-gradient(131deg, rgba(255,121,218,1) 5%, rgba(147,86,220,1) 61%);
-        border: none;
-        height: 50px;
-        padding: 0px 20px 0px 20px;
-        color: white;
-        font-weight: 400;
-        font-size: 16px;
-        text-align: center;
-        line-height: 21.13px;
-        border-radius: 25px 25px 25px 25px;
-        box-shadow: 0px 3px 6px 2px #d3d3d3;
-        position: relative;
-        z-index: 1;
-        &:hover {
-            &::after {
-                opacity: 1;
-            }
-        }
-            &::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;                
-                border-radius: 25px 25px 25px 25px;                
-                box-shadow: 0px 3px 6px 2px darken(#d3d3d3, 10%);
-                background: linear-gradient(131deg, lighten(rgba(255,121,218,1), 10%) 5%, lighten(rgba(147,86,220,1), 10%) 61%);;
-                opacity: 0;
-                z-index: -1;
-                transition: opacity 250ms;
-            }
-        
-    }
+        color: $couleurTexteSecondaire;
+    }    
 }
 .sectionFonctionnement{    
     padding-bottom: 50px;
@@ -111,7 +75,7 @@
     border-radius: 20px;
     gap: 20px;
     width: 100%;
-    box-shadow: 0px 3px 6px 2px #d3d3d3;
+    box-shadow: 0px 3px 6px 2px $couleurOmbre;
     @media all and (min-width: $breakPointTablette) and (max-width:$breakPointDesktop){
         width: auto;
         padding-right: 15px;
@@ -131,7 +95,7 @@
     }
     &__iconeEtape{
         &--couleurGris{
-            color: #7e7e7e;
+            color: $couleurTexteSecondaire;
         }
         &--couleurPrimaire{
             color: $couleurPrimaire;
@@ -186,11 +150,11 @@
         display: flex;
         flex-direction: column;
         text-decoration: none;
-        box-shadow: 5px 5px 5px #d9d9d9;
+        box-shadow: 5px 5px 5px $couleurOmbre;
     }
     &__encartNouveau{
-        background-color: #99e2d0;
-        color: #139273;
+        background-color: $couleurTertiaire;
+        color: darken($color: $couleurTertiaire, $amount: 40%);
         font-weight: 900;
         position: absolute;
         left: 70%;
@@ -269,7 +233,7 @@
 }
 @keyframes disparition {
     0%   { 
-        opacity: 1;  /* Firefox 16+, IE 10+, Opera */
+        opacity: 1;  
     }
     100% {
         opacity: 0;
@@ -277,7 +241,7 @@
 }
 @keyframes horsEcran {
     0%   { 
-        transform: translateY(0%);  /* Firefox 16+, IE 10+, Opera */
+        transform: translateY(0%);  
     }
     100% {
         transform: translateY(-100%);
@@ -295,10 +259,7 @@
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: $couleurPrimaire;
-
-    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
-
+    animation: spin 2s linear infinite; 
     z-index: 1001;
 }
 
@@ -312,9 +273,7 @@
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: $couleurSecondaire;
-
-    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    animation: spin 3s linear infinite; 
 }
 
 .spinner:after {
@@ -327,33 +286,15 @@
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: $couleurTertiaire;
-
-    -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-      animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    animation: spin 1.5s linear infinite;   
 }
 
-@-webkit-keyframes spin {
-    0%   { 
-        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
-        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
-    }
-    100% {
-        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
-        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
-    }
-}
 @keyframes spin {
-    0%   { 
-        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
-        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    0%   {         
+        transform: rotate(0deg); 
     }
     100% {
-        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
-        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        transform: rotate(360deg);  
     }
 }
 
@@ -364,10 +305,8 @@
         width: 51%;
         height: 100%;
         background: lighten($color: $couleurPrimaire, $amount: 10%);
-        z-index: 1000;
-        -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: translateX(0);  /* IE 9 */
-        transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+        z-index: 1000;        
+        transform: translateX(0); 
     }
 }
 
@@ -383,7 +322,7 @@
 
 @keyframes departGauche {
     0%   { 
-        transform: translateX(0%);  /* Firefox 16+, IE 10+, Opera */
+        transform: translateX(0%);  
     }
     100% {
         transform: translateX(-100%);
@@ -391,52 +330,10 @@
 }
 @keyframes departdroite {
     0%   { 
-        transform: translateX(0%);  /* Firefox 16+, IE 10+, Opera */
+        transform: translateX(0%);  
     }
     100% {
         transform: translateX(100%);
     }
 }
 
-/* Loaded */
-.loaded .chargement .sectionChargement.sectionGauche {
-    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: translateX(-100%);  /* IE 9 */
-            transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
-
-    -webkit-transition: all 2s 3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
-            transition: all 2s 3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-}
-
-.loaded .chargement .sectionChargement.sectionDroite {
-    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: translateX(100%);  /* IE 9 */
-            transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
-
--webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
-    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-}
-
-.loaded .spinner {
-    opacity: 0;
-    -webkit-transition: all 0.3s ease-out;  
-            transition: all 0.3s ease-out;
-}
-.loaded .chargement {
-    visibility: hidden;
-
-    -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: translateY(-100%);  /* IE 9 */
-            transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
-
-    -webkit-transition: all 0.3s 1s ease-out;  
-            transition: all 0.3s 1s ease-out;
-}
-.no-js .chargement {
-    display: none;
-}
-
-@keyframes fadeout {
-    from { opacity: 1; }
-    to   { opacity: 0; }
-}

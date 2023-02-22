@@ -1,5 +1,5 @@
 .footer{
-    background-color: #353535;
+    background-color: $couleurFondFooter;
     padding: 15px 0px 25px 20px;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
     &__h4{
         margin: 0;
         font-weight: 400;
-        font-family: 'Shrikhand', cursive;
+        font-family: $fontTitre;
         color: white;
     }
     &__ul{
