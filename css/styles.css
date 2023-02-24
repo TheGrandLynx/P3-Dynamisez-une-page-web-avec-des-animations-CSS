@@ -197,6 +197,12 @@ hr.solid {
   width: 100%;
   box-shadow: 0px 3px 6px 2px #d3d3d3;
 }
+.etape:hover {
+  background-color: #f2eafb;
+}
+.etape:hover .fa-solid {
+  color: #9356DC;
+}
 @media all and (min-width: 599px) and (max-width: 992px) {
   .etape {
     width: auto;
@@ -217,12 +223,6 @@ hr.solid {
   text-align: center;
   position: relative;
   left: -10px;
-}
-.etape__iconeEtape--couleurGris {
-  color: #6a6a6a;
-}
-.etape__iconeEtape--couleurPrimaire {
-  color: #9356DC;
 }
 
 .sectionRestaurants {
