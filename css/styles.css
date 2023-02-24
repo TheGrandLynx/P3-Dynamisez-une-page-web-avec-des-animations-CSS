@@ -224,6 +224,9 @@ hr.solid {
   position: relative;
   left: -10px;
 }
+.etape__iconeEtape .fa-solid {
+  color: #6a6a6a;
+}
 
 .sectionRestaurants {
   background-color: #f7f7f7;

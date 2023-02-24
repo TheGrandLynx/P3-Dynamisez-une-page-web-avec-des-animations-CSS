@@ -99,7 +99,11 @@
         position: relative;
         left: -10px;        
     }
-    
+    &__iconeEtape{
+        .fa-solid{
+        color: $couleurTexteSecondaire;
+        }
+    }
 }
 
 .sectionRestaurants{
